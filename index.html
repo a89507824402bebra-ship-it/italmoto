@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Итальянские запчасти для двухтактных скутеров и мопедов. Каталог, подбор и аксессуары.">
+<title>ITALMOTO — итальянские запчасти</title>
+<style>
+:root{--bg:#101311;--panel:#191e1a;--panel2:#202720;--text:#f4f4ed;--muted:#a4ada3;--green:#b7ef45;--red:#e84c3d;--line:#303a31}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,Arial,sans-serif}
+a{color:inherit;text-decoration:none}button,input,select{font:inherit}.wrap{max-width:1180px;margin:auto;padding:0 24px}
+header{height:76px;border-bottom:1px solid var(--line);display:flex;align-items:center;position:sticky;top:0;background:#101311ed;backdrop-filter:blur(12px);z-index:10}
+.nav{display:flex;align-items:center;justify-content:space-between;width:100%}.logo{font-weight:950;letter-spacing:1.5px;font-size:23px}.logo span{color:var(--green)}.links{display:flex;gap:28px;color:#c5ccc3;font-size:14px}.links a:hover{color:var(--green)}.cart{border:1px solid var(--line);background:var(--panel);color:white;padding:10px 15px;border-radius:8px;cursor:pointer}.cart b{color:var(--green);margin-left:7px}
+.hero{padding:76px 0 64px;display:grid;grid-template-columns:1.1fr .9fr;gap:36px;align-items:center}.eyebrow{color:var(--green);font-size:12px;letter-spacing:2.4px;font-weight:800;text-transform:uppercase}.hero h1{font-size:clamp(42px,6vw,76px);line-height:.98;letter-spacing:-3px;margin:18px 0}.hero h1 em{font-style:normal;color:var(--green)}.hero p{color:var(--muted);font-size:17px;line-height:1.7;max-width:520px}.actions{display:flex;gap:12px;margin-top:28px;flex-wrap:wrap}.btn{border:0;border-radius:8px;padding:14px 20px;font-weight:800;cursor:pointer}.primary{background:var(--green);color:#11170c}.secondary{background:transparent;color:white;border:1px solid #536052}.hero-art{min-height:360px;border-radius:18px;background:radial-gradient(circle at 50% 40%,#384a2c,#1b251c 50%,#121713 76%);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;border:1px solid #344132}.hero-art:before{content:"";position:absolute;width:270px;height:270px;border:2px solid #b7ef4544;border-radius:50%;box-shadow:0 0 0 32px #b7ef4510,0 0 0 68px #b7ef4508}.gear{font-size:170px;filter:drop-shadow(0 20px 20px #0009);z-index:1}.made{position:absolute;bottom:22px;right:22px;color:#d4dfd1;font-size:11px;letter-spacing:2px}
+.perks{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:0 0 70px}.perk{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:18px}.perk strong{display:block;margin-bottom:6px}.perk span{color:var(--muted);font-size:13px}
+.section-head{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:24px}.section-head h2{font-size:34px;letter-spacing:-1px;margin:8px 0 0}.section-head p{color:var(--muted);margin:0}
+.catalog{padding:12px 0 80px}.toolbar{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:22px}.toolbar input,.toolbar select{background:var(--panel);border:1px solid var(--line);color:white;border-radius:8px;padding:12px 14px;outline:none}.toolbar input{flex:1;min-width:200px}.toolbar select{min-width:170px}.chips{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:22px}.chip{border:1px solid var(--line);background:transparent;color:#cbd2c8;border-radius:30px;padding:9px 14px;cursor:pointer;font-size:13px}.chip.active,.chip:hover{background:var(--green);color:#11170c;border-color:var(--green)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.product{background:var(--panel);border:1px solid var(--line);border-radius:12px;overflow:hidden;transition:.2s}.product:hover{transform:translateY(-4px);border-color:#657b55}.photo{height:180px;background:linear-gradient(145deg,#29352a,#151b16);display:grid;place-items:center;position:relative}.photo .emoji{font-size:78px;filter:drop-shadow(0 12px 12px #0008)}.tag{position:absolute;top:13px;left:13px;background:#b7ef45;color:#11170c;font-size:10px;font-weight:900;padding:6px 9px;border-radius:4px;text-transform:uppercase}.product-info{padding:17px}.brand{font-size:10px;letter-spacing:1.5px;color:var(--green);font-weight:800}.product h3{font-size:17px;margin:8px 0}.desc{font-size:13px;line-height:1.5;color:var(--muted);min-height:39px}.buyline{display:flex;align-items:center;justify-content:space-between;margin-top:16px}.price{font-size:20px;font-weight:900}.add{background:var(--green);border:0;border-radius:7px;padding:10px 13px;font-weight:900;cursor:pointer;color:#11170c}.empty{grid-column:1/-1;text-align:center;padding:50px;color:var(--muted);background:var(--panel);border-radius:12px}
+.about{background:#171e18;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:56px 0}.about-inner{display:grid;grid-template-columns:1fr 1fr;gap:40px}.about h2{font-size:32px;margin:10px 0}.about p{color:var(--muted);line-height:1.7}.note{border-left:3px solid var(--green);padding:14px 18px;background:#202920;color:#cbd4c8;border-radius:0 8px 8px 0;font-size:13px;line-height:1.6}
+footer{padding:30px 0;color:var(--muted);font-size:12px}.foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.overlay{display:none;position:fixed;inset:0;background:#000a;z-index:20;justify-content:flex-end}.overlay.open{display:flex}.drawer{width:min(420px,100%);height:100%;background:#151b16;padding:24px;overflow:auto;border-left:1px solid var(--line)}.drawer-head{display:flex;justify-content:space-between;align-items:center}.close{background:transparent;color:white;border:1px solid var(--line);border-radius:7px;padding:8px 12px;cursor:pointer}.cart-item{display:flex;justify-content:space-between;gap:12px;border-bottom:1px solid var(--line);padding:16px 0}.cart-item small{display:block;color:var(--muted);margin-top:5px}.qty{display:flex;align-items:center;gap:8px}.qty button{background:var(--panel2);color:white;border:1px solid var(--line);border-radius:5px;width:25px;height:25px;cursor:pointer}.total{display:flex;justify-content:space-between;font-size:20px;font-weight:900;margin:24px 0}.checkout{width:100%}
+@media(max-width:800px){.hero{grid-template-columns:1fr;padding-top:50px}.hero-art{min-height:260px}.gear{font-size:130px}.grid{grid-template-columns:repeat(2,1fr)}.links{display:none}.about-inner{grid-template-columns:1fr}}
+@media(max-width:540px){.wrap{padding:0 16px}.perks{grid-template-columns:1fr}.grid{grid-template-columns:1fr}.section-head{align-items:start;flex-direction:column}.hero h1{letter-spacing:-2px}.hero{padding-top:42px}}
+</style>
+</head>
+<body>
+<header><div class="wrap nav"><a class="logo" href="#">ITAL<span>MOTO</span></a><nav class="links"><a href="#catalog">Каталог</a><a href="#about">О магазине</a><a href="#contacts">Контакты</a></nav><button class="cart" onclick="toggleCart()">Корзина <b id="cartCount">0</b></button></div></header>
+<main>
+<section class="wrap hero">
+ <div><div class="eyebrow">Italian performance parts</div><h1>ХАРАКТЕР.<br><em>МОЩНОСТЬ.</em><br>ИТАЛИЯ.</h1><p>Запчасти и тюнинг для двухтактных скутеров и мопедов. Подбор компонентов для тех, кто любит технику и понимает её характер.</p><div class="actions"><a class="btn primary" href="#catalog">Смотреть каталог</a><a class="btn secondary" href="#about">О проекте</a></div></div>
+ <div class="hero-art"><div class="gear">⚙️</div><div class="made">MADE FOR TWO-STROKE ENTHUSIASTS</div></div>
+</section>
+<section class="wrap perks">
+ <div class="perk"><strong>🇮🇹 Итальянские бренды</strong><span>Malossi, Polini, Stage6 и другие</span></div>
+ <div class="perk"><strong>🔧 Подбор по модели</strong><span>Поможем сверить совместимость деталей</span></div>
+ <div class="perk"><strong>🏁 Для 2T техники</strong><span>Цилиндры, вариаторы, карбюраторы и тюнинг</span></div>
+</section>
+<section class="wrap catalog" id="catalog">
+ <div class="section-head"><div><div class="eyebrow">Подбор деталей</div><h2>Каталог запчастей</h2></div><p>Демонстрационный ассортимент</p></div>
+ <div class="toolbar"><input id="search" type="search" placeholder="Поиск по названию или бренду…" oninput="renderProducts()"><select id="sort" onchange="renderProducts()"><option value="default">Сначала популярные</option><option value="low">Сначала дешевле</option><option value="high">Сначала дороже</option></select></div>
+ <div class="chips" id="chips"></div><div class="grid" id="products"></div>
+</section>
+<section class="about" id="about"><div class="wrap about-inner"><div><div class="eyebrow">Почему ITALMOTO</div><h2>Детали, которые меняют характер</h2><p>Мы собрали концепцию магазина для поклонников двухтактной техники: от повседневного обслуживания до серьёзного тюнинга. Выбирай категорию, изучай характеристики и собирай свой сетап.</p></div><div class="note"><strong>Важно:</strong> это демонстрационный сайт. Названия товаров и цены приведены как пример интерфейса, наличие, оригинальность, стоимость и совместимость не подтверждены. Перед покупкой обязательно сверяй артикул и модель двигателя.</div></div></section>
+</main>
+<footer id="contacts"><div class="wrap foot"><span>© 2026 ITALMOTO — концепт магазина запчастей</span><span>Связь: добавь сюда свой Telegram или телефон</span></div></footer>
+<div class="overlay" id="overlay" onclick="if(event.target===this)toggleCart()"><aside class="drawer"><div class="drawer-head"><h2>Корзина</h2><button class="close" onclick="toggleCart()">Закрыть ✕</button></div><div id="cartItems"></div><div class="total"><span>Итого</span><span id="total">0 ₽</span></div><button class="btn primary checkout" onclick="alert('Это демо-магазин: подключи оплату и доставку для оформления заказов.')">Перейти к оформлению</button></aside></div>
+<script>
+const products=[
+{id:1,brand:"MALOSSI",name:"ЦПГ Sport 70cc",cat:"ЦПГ и поршневые",price:12900,emoji:"🔩",tag:"Тюнинг",desc:"Комплект цилиндра для двухтактного скутера. Проверяй диаметр и совместимость."},
+{id:2,brand:"POLINI",name:"Вариатор Hi-Speed",cat:"Трансмиссия",price:8900,emoji:"⚙️",tag:"Популярное",desc:"Вариатор для настройки разгона и рабочих оборотов двигателя."},
+{id:3,brand:"DELL'ORTO",name:"Карбюратор PHBG 19",cat:"Впуск и карбюраторы",price:7600,emoji:"🛠️",tag:"Классика",desc:"Карбюратор 19 мм. Требует правильного подбора жиклёров и настройки."},
+{id:4,brand:"MALOSSI",name:"Ремень X-Kevlar",cat:"Трансмиссия",price:3200,emoji:"〰️",tag:"Усиленный",desc:"Ремень вариатора. Размер необходимо сверить с конкретной моделью."},
+{id:5,brand:"POLINI",name:"Фильтр воздушный",cat:"Впуск и карбюраторы",price:2100,emoji:"🌪️",tag:"Впуск",desc:"Фильтр для тюнингованного впуска. После установки нужна перенастройка смеси."},
+{id:6,brand:"STAGE6",name:"Пружины сцепления",cat:"Трансмиссия",price:1450,emoji:"🌀",tag:"Настройка",desc:"Комплект пружин для изменения оборотов срабатывания сцепления."},
+{id:7,brand:"NGK",name:"Свеча зажигания",cat:"Зажигание",price:650,emoji:"⚡",tag:"Обслуживание",desc:"Свеча зажигания. Тепловое число и длину резьбы подбирай по мотору."},
+{id:8,brand:"GIANNELLI",name:"Спортивный выхлоп",cat:"Выхлоп",price:11500,emoji:"💨",tag:"Выхлоп",desc:"Спортивная выпускная система. Совместимость зависит от рамы и двигателя."},
+{id:9,brand:"MALOSSI",name:"Комплект роликов",cat:"Трансмиссия",price:1100,emoji:"⚪",tag:"Настройка",desc:"Ролики вариатора. Вес подбирается под конфигурацию двигателя и трансмиссии."}
+];
+const categories=["Все","ЦПГ и поршневые","Трансмиссия","Впуск и карбюраторы","Зажигание","Выхлоп"];
+let active="Все",cart={};
+const money=n=>n.toLocaleString("ru-RU")+" ₽";
+function makeChips(){document.getElementById("chips").innerHTML=categories.map(c=>`<button class="chip ${c===active?'active':''}" onclick="active='${c}';makeChips();renderProducts()">${c}</button>`).join("")}
+function renderProducts(){
+ let q=document.getElementById("search").value.toLowerCase(),sort=document.getElementById("sort").value;
+ let list=products.filter(p=>(active==="Все"||p.cat===active)&&(`${p.name} ${p.brand} ${p.cat}`).toLowerCase().includes(q));
+ if(sort==="low")list.sort((a,b)=>a.price-b.price);if(sort==="high")list.sort((a,b)=>b.price-a.price);
+ document.getElementById("products").innerHTML=list.length?list.map(p=>`<article class="product"><div class="photo"><span class="tag">${p.tag}</span><span class="emoji">${p.emoji}</span></div><div class="product-info"><div class="brand">${p.brand}</div><h3>${p.name}</h3><div class="desc">${p.desc}</div><div class="buyline"><span class="price">${money(p.price)}</span><button class="add" onclick="addToCart(${p.id})">В корзину +</button></div></div></article>`).join(""):`<div class="empty">Ничего не найдено. Попробуй изменить запрос или категорию.</div>`;
+}
+function addToCart(id){cart[id]=(cart[id]||0)+1;updateCart()}
+function changeQty(id,d){cart[id]=(cart[id]||0)+d;if(cart[id]<=0)delete cart[id];updateCart()}
+function updateCart(){
+ let count=Object.values(cart).reduce((a,b)=>a+b,0),total=0;
+ document.getElementById("cartCount").textContent=count;
+ let entries=Object.entries(cart);
+ document.getElementById("cartItems").innerHTML=entries.length?entries.map(([id,qty])=>{let p=products.find(x=>x.id==id);total+=p.price*qty;return `<div class="cart-item"><div><strong>${p.name}</strong><small>${p.brand} · ${money(p.price)}</small></div><div class="qty"><button onclick="changeQty(${id},-1)">−</button>${qty}<button onclick="changeQty(${id},1)">+</button></div></div>`}).join(""):'<p style="color:#a4ada3">Корзина пока пустая.</p>';
+ document.getElementById("total").textContent=money(total);
+}
+function toggleCart(){document.getElementById("overlay").classList.toggle("open")}
+makeChips();renderProducts();updateCart();
+</script>
+</body></html>
